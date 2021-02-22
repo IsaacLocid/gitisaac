@@ -1,0 +1,209 @@
+public class CiclosCilcos {
+	static BufferedReader n = new BufferedReader(new InputStreamReader(System.in));
+
+	public static void main(String[] args) throws IOException {
+		int opcionMenu = 0, operacion = 0;
+		double num1 = 0;
+		double num2 = 0;
+		int elije = 0;
+
+		while (opcionMenu != 4) {
+			System.out.println("\n1.- Menú con do-While");
+			System.out.println("2.- Menú con for");
+			System.out.println("3.- Menú con While");
+			System.out.println("4.- Salir");
+			System.out.print("Dame una opción: ");
+			operacion=1;
+			opcionMenu = Integer.parseInt(n.readLine());
+
+			switch (opcionMenu) {
+			case 1:
+				// Ciclo do-While
+				// CODE HERE
+				 while (operacion > 0 && operacion <5) {
+				do {
+					System.out.println("\nCiclo do-While");
+					System.out.println("1.- Suma");
+					System.out.println("2.- Resta");
+					System.out.println("3.- Multiplicación");
+					System.out.println("4.- División");
+					System.out.println("5.- Salir");
+					System.out.print("Dame una opción: ");
+					operacion = Integer.parseInt(n.readLine());
+			
+				
+                  
+			
+					   System.out.println("Give me a first number");
+					num1 = Integer.parseInt(n.readLine());
+					System.out.println("Give me a second number");
+					num2 = Integer.parseInt(n.readLine());
+				
+				if (operacion == 1) {
+
+					System.out.println(num1 + num2);
+
+				} else if (operacion == 2) {
+					System.out.println(num1 - num2);
+
+				} else if (operacion == 3) {
+					System.out.println(num1 * num2);
+
+				} else if (operacion == 4) {
+					if(num2==0) {
+						System.out.println("Imposible dividir un número entre 0!!\nIntentalo de nuevo por favor");
+					}else
+					System.out.println(num1 / num2);
+	
+				} else {
+					System.out.println("Opción inválida.");
+				
+				}
+				do {
+					System.out.println("Deseas hacer otra operación");
+					System.out.println("[SI]....1\n[NO]....2");
+					elije = Integer.parseInt(n.readLine());
+					}while(elije<0 ||elije >2);
+					
+					if(elije==1) {
+						operacion=1;
+					}else if  (elije==2){
+						operacion=8;
+					}
+					
+					} while (operacion > 0 && operacion <5);
+				 }
+				 break;
+			case 2:
+				// Ciclo for
+				// CODE HERE
+				for (int i = 0; i < 1;) {
+					System.out.println("\nCiclo For");
+					System.out.println("1.- Suma");
+					System.out.println("2.- Resta");
+					System.out.println("3.- Multiplicación");
+					System.out.println("4.- División");
+					System.out.println("5.- salir");
+					System.out.print("Dame una opción: ");
+
+					operacion = Integer.parseInt(n.readLine());
+
+					if (operacion < 0 || operacion < 5) {
+						System.out.println("Give me a first number");
+						num1 = Integer.parseInt(n.readLine());
+						System.out.println("Give me a second number");
+						num2 = Integer.parseInt(n.readLine());
+						
+
+					}
+					if (operacion == 1) {
+
+						System.out.println(num1 + num2);
+
+					} else if (operacion == 2) {
+						System.out.println(num1 - num2);
+
+					} else if (operacion == 3) {
+						System.out.println(num1 * num2);
+
+					} else if (operacion == 4) {
+						if(num2==0) {
+							System.out.println("Imposible dividir un número entre 0!!\nIntentalo de nuevo por favor");
+						}else
+						System.out.println(num1 / num2);
+
+					} else if (operacion == 5) {
+						break;
+
+					} else {
+						System.out.println("Opción inválida.");
+						operacion = 1;
+					}
+					do {
+						System.out.println("Deseas hacer otra operación");
+						System.out.println("[SI]....1\n[NO]....2");
+						elije = Integer.parseInt(n.readLine());
+						}while(elije<0 ||elije >2);
+						
+						if(elije==2) {
+							break;
+						}
+						
+						
+					
+				}
+				
+				break;
+			case 3:
+				// Ciclo While
+				// CODE HERE
+				operacion = 1;
+				while (operacion > 0 && operacion < 5) {
+					System.out.println("Ciclo-While");
+					System.out.println("1.- Suma");
+					System.out.println("2.- Resta");
+					System.out.println("3.- Multiplicación");
+					System.out.println("4.- División");
+					System.out.println("5.- Salir");
+					System.out.print("Dame una opción: ");
+					operacion = Integer.parseInt(n.readLine());
+
+					if (operacion < 0 || operacion < 5) {
+						System.out.println("Give me a first number");
+						num1 = Integer.parseInt(n.readLine());
+						System.out.println("Give me a second number");
+						num2 = Integer.parseInt(n.readLine());
+						
+
+					}
+				if (operacion == 1) {
+
+					System.out.println(num1 + num2);
+
+				} else if (operacion == 2) {
+					System.out.println(num1 - num2);
+
+				} else if (operacion == 3) {
+					System.out.println(num1 * num2);
+
+				} else if (operacion == 4) {
+					if(num2==0) {
+						System.out.println("Imposible dividir un número entre 0!!\nIntentalo de nuevo por favor");
+					}else
+					System.out.println(num1 / num2);
+	
+				} else {
+					System.out.println("Opción inválida.");
+					
+				}
+				do {
+					System.out.println("Deseas hacer otra operación");
+					System.out.println("[SI]....1\n[NO]....2");
+					elije = Integer.parseInt(n.readLine());
+					}while(elije<0 ||elije >2);
+					
+					if(elije==1) {
+						operacion=1;
+					}else if  (elije==2){
+						operacion=8;
+					}
+					
+					} while (operacion > 0 && operacion <5);
+					
+					 
+				
+			case 4:
+				System.out.println("Saliendo...");
+				
+break;
+			default:
+				System.out.println("Opción inválida.");
+				break;
+			}
+
+		}
+
+	}
+
+
+}
